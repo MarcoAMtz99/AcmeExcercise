@@ -2,9 +2,6 @@
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
 ## Ejercicio de código
@@ -37,9 +34,8 @@ necesita preocuparse por la entrada mal formada, pero ciertamente debe manejar n
 mayúsculas y minúsculas.
 
 
-### Premium Partners
-
-- **[Marco A Mtz]**
+### Marco A Mtz 23/06/2022
+ 
 
 
 
