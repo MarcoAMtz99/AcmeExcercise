@@ -17,7 +17,9 @@
   <button type="submit" class="btn btn-primary col-6">Asignar</button>
 </form>
  
-
+@if($errors->any())
+<h4>{{$errors->first()}}</h4>
+@endif
 
 
 </div>

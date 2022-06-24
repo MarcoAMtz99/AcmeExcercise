@@ -6,6 +6,7 @@ use App\Models\operador;
 use App\Models\direccion;
 use App\Models\historial;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class OperadorController extends Controller
 {
@@ -98,10 +99,17 @@ class OperadorController extends Controller
      */
     public function asignar(Request $request, operador $operador)
     {       
-          //debug entrada de datos
-         // $aux = $this->contarConsonantes($request->operador);
-          // dd($aux['consonantes']);
-          //obtenemos todos los registros de direcciones
+       
+            $d0 = Carbon::today();
+            $d1 =$d0->addDay(1);
+             $intervalo = historial::where('created_at','>',$d0)->where('created_at','<', $d1)->get();
+
+            // dd(count($intervalo));
+             //evaluacion de las asiganciones diarioas y en caso de ser verdadero hacemos redirect con msg de error
+            if (count($intervalo) ==0) {
+                return redirect()->route('home')->withErrors(['msg' => 'Solo puedes asignar una vez por dia']);
+            }
+           // $registro = historial::where('operador_id',$idCond)->get();
           $operadores = operador::all();
           $direcciones = direccion::all();
           //obtenemos la cantidad de caracteres del nombre del operador
@@ -164,8 +172,8 @@ class OperadorController extends Controller
 
                             
                              $aux = historial::where('operador_id',$rk[2])->count();
-                             // $aux2 = historial::select('operador_id')->get();
-                             // dd($aux2);
+                            
+                           
                               if (!($aux > 0)) {
                                   $ranking= $rk[1];
                                   $idCond = $rk[2];
@@ -217,10 +225,9 @@ class OperadorController extends Controller
                );
                 // dd($nombre->nombre);
                array_push($Nuevo,$prueba);
-               // dd($nombre->getFullnameAttribute(), $direccion->getFullnameAdress());
+              
            }
-           //  $resultado2 = direccion::all();
-           // dd($resultado, $resultado2);
+          
           return view('operador.asignar',['puntuaciones'=>$Nuevo]);
 
     }

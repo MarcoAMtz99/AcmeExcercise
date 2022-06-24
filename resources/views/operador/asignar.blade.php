@@ -24,8 +24,8 @@
     <tr>
       <th scope="col">#</th>
       <th scope="col">Ranking</th>
-      <th scope="col">Direccion</th>
       <th scope="col">Conductor</th>
+      <th scope="col">Direccion</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
