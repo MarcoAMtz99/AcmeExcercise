@@ -7,58 +7,39 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Ejercicio de código
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Nuestro equipo de ventas acaba de llegar a un acuerdo con Acme Inc. para convertirse en el proveedor
+exclusivo para enrutar sus envíos de productos a través de flotas de camiones de terceros. El problema
+es que solo podemos enrutar un envío a un conductor por día.
+Cada día recibimos la lista de destinos de envío que están disponibles para ofrecer a los conductores de
+nuestra red. Afortunadamente, nuestro equipo de científicos de datos altamente capacitados ha
+desarrollado un modelo matemático para determinar qué conductores son los más adecuados para
+entregar cada envío.
+Con ese arduo trabajo hecho, ahora todo lo que tenemos que hacer es implementar un programa que
+asigne cada destino de envío a un conductor determinado mientras maximiza la idoneidad total de todos
+los envíos para todos los conductores.
+El algoritmo secreto es:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Si la longitud del nombre de la calle de destino del envío es par, la puntuación básica de
+idoneidad (SS) es el número de vocales del nombre del conductor multiplicado por 1,5.
+- Si la longitud del nombre de la calle de destino del envío es impar, la base SS es el número de
+consonantes en el nombre del conductor multiplicado por 1.
+- Si la longitud del nombre de la calle de destino del envío comparte algún factor común (además
+de 1) con la longitud del nombre del conductor, el SS aumenta en un 50 % por encima del SS
+base.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Escriba una aplicación en el idioma de su elección que asigne destinos de envío a los conductores de
+una manera que maximice el SS total sobre el conjunto de conductores. Cada conductor solo puede
+tener un envío y cada envío solo se puede ofrecer a un conductor.
+El resultado debe ser el SS total y una coincidencia entre los destinos del envío y los conductores. No
+necesita preocuparse por la entrada mal formada, pero ciertamente debe manejar nombres en
+mayúsculas y minúsculas.
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **[Marco A Mtz]**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
